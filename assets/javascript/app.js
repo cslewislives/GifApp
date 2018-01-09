@@ -1,6 +1,11 @@
 $(document).ready(function () {
+
     var key = "RXQMk6lCuY60A5fJc4755x3ZKsDhOFCc";
     var topics = ["Critical Role", "Harry Potter", "Star Wars", "Supernatural", "Doctor Who", "Phineas and Ferb", "Doctor Strange", "Iron Man", "Deadpool", "X-Men"];
+
+    /*=======================================
+        function to create and render buttons
+    =========================================*/
 
     function renderBtns() {
         $("#buttons-view").empty();
@@ -14,6 +19,9 @@ $(document).ready(function () {
         }
     }
 
+    /*=======================================
+        function to call the API and render the response
+    =========================================*/
 
     function displayGifs() {
         $("#gifs-view").empty();
@@ -50,7 +58,11 @@ $(document).ready(function () {
         })
     }
 
-    $("#add-fandom").on("click", function (event) {
+    /*=======================================
+       When add button is clicked it adds a new button
+    =========================================*/
+
+    $("#add-fandom").on("click", function(event) {
         event.preventDefault();
 
         var newFandom = $("#fandom-input").val().trim();
@@ -59,6 +71,10 @@ $(document).ready(function () {
 
         renderBtns();
     })
+
+    /*=======================================
+        when gif is clicked it will animate
+    =========================================*/
 
     $(document).on("click", ".gif", function () {
 
